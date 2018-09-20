@@ -1,21 +1,17 @@
-# HaltTask
+# Halt Task
 
-**TODO: Add description**
+Simple Mix Task that halts the system when executed.
+Literally it's just a mix task that calls `System.halt()`.
 
-## Installation
+It's useful to halts the system after some task is complete.
+For example when running tests on IEx to close the IEx after the test suite runs.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `halt_task` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:halt_task, "~> 0.1.0"}
-  ]
-end
+### Installation
+```
+mix archive.install https://github.com/scudelletti/halt_task/raw/master/archives/halt_task.ez
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/halt_task](https://hexdocs.pm/halt_task).
-
+### Example: How to use - It will close IEx after tests run
+```
+ MIX_ENV=test iex -S mix do test , halt
+```
