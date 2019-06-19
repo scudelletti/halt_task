@@ -3,7 +3,7 @@
 Simple Mix Task that halts the system when executed.
 Literally it's just a mix task that calls `System.halt()`.
 
-It's useful to halts the system after some task is complete.
+It's useful to halt the system after some task is complete.
 For example when running tests on IEx to close the IEx after the test suite runs.
 
 ### Installation
