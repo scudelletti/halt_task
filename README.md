@@ -13,10 +13,16 @@ mix archive.install https://github.com/scudelletti/halt_task/raw/master/archives
 
 ### Example: How to use - It will close IEx after tests run
 ```
-MIX_ENV=test iex -S mix do test , halt
+MIX_ENV=test iex -S mix do test, halt
+```
+
+### You can achieve the same behavior using `mix run -e "System.halt"` something like:
+```
+MIX_ENV=test iex -S mix do test, run -e "System.halt"
 ```
 
 ### Building archive
 ```
 mix archive.build -o archives/halt_task.ez
 ```
+
